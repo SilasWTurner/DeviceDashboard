@@ -10,12 +10,15 @@ namespace backend.Controllers
     public class DeviceController : ControllerBase
     {
         private readonly DeviceService _deviceService =  new DeviceService();
+        
+        // Endpoint for getting all devices
         [HttpGet]
         public ActionResult<IEnumerable<Device>> GetAll()
         {
             return Ok(_deviceService.GetAllDevices());
         }
 
+        // Endpoint for getting specific device from id
         [HttpGet("{id}")]
         public ActionResult<Device> Get(int id)
         {

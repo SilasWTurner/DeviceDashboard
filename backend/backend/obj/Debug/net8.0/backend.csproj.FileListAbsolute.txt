@@ -225,3 +225,4 @@
 /home/silas/dev/DeviceDashboard/backend/backend/obj/Debug/net8.0/backend.pdb
 /home/silas/dev/DeviceDashboard/backend/backend/obj/Debug/net8.0/backend.genruntimeconfig.cache
 /home/silas/dev/DeviceDashboard/backend/backend/obj/Debug/net8.0/ref/backend.dll
+/home/silas/dev/DeviceDashboard/backend/backend/obj/Debug/net8.0/backend.sourcelink.json
