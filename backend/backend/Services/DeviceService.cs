@@ -9,9 +9,9 @@ public class DeviceService
     // Hardcoded list of devices for testing/experimenting
     private readonly List<Device> _devices =
     [
-        new Device(1, "Device Alpha", Random.Next(101)),
-        new Device(2, "Device Bravo", Random.Next(101)),
-        new Device(3, "Device Charlie", Random.Next(101))
+        new Device(0, "Device Alpha", Random.Next(101)),
+        new Device(1, "Device Bravo", Random.Next(101)),
+        new Device(2, "Device Charlie", Random.Next(101))
     ];
     
     // Function to get all devices from the hardcoded list
@@ -28,4 +28,11 @@ public class DeviceService
     // Function to get single device from an id
     public Device? GetDevice(int id) =>
         _devices.FirstOrDefault(d => d.Id == id);
+
+    // Function to add a device
+    public void AddDevice(string name)
+    {
+        _devices.Add(new Device(_devices.Count, name, Random.Next(101)));
+        Console.WriteLine($"Device '{name}' has been added");
+    }
 }

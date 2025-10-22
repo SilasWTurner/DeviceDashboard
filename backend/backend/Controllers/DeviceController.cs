@@ -26,5 +26,13 @@ namespace backend.Controllers
             if (device == null) return NotFound();
             return Ok(device);
         }
+        
+        // Endpoint for adding a device
+        [HttpPost]
+        public ActionResult<IEnumerable<Device>> Post(string name)
+        {
+            _deviceService.AddDevice(name);
+            return Ok(_deviceService.GetAllDevices());
+        }
     }
 }
